@@ -9,20 +9,91 @@
     <!-- Custom Style -->
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <!--  -->
+    <!-- Font -->
+    <link rel="stylesheet" href="https://www.dafontfree.net/embed/YWdlbmN5LWZiLXJlZ3VsYXImZGF0YS8xMy9hLzY0MzY5L0FHRU5DWVIuVFRG">
 </head>
 <body>
 
-    <section class="home_section main2">
-        
-        <div class="home_background_img"></div>
-    </section>
+    <section class="home_section">
+        <nav class="nav">
+            <a href="index.html" class="home_logo">
+                <img src="assets/img/SolomonsWebsite/Homepage/HomeButton_HomePage.png" alt="">
+            </a>
+            <a href="#" class="menu_btn">
+                <img src="assets/img/SolomonsWebsite/Homepage/Menu Button_HomePage.png" alt="">
+            </a>
+        </nav>
+        <figure class="home_main_img">
+            <img src="assets/img/SolomonsWebsite/Homepage/Illustration_HomePage.png" alt="">
+        </figure>
+        <div class="text">
+            <p>
+                <strong>Solomon: In Search of A Song</strong> is the captivating, inspiring 
+                and unifying journey of one man experiencing the culture 
+                and sounds of the cradle of civilization; Africa. 
+            </p>
+        </div>
+
+        <figure class="music_btn">
+            <img src="assets/img/SolomonsWebsite/Homepage/Mute Button_HomePage.png" alt="" id="music_btn">
+        </figure>
+
+        <div class="container">
+            <div class="row align-items-center justify-content-evenly">
+                <a href="#" class="intro_btn">
+                    <img src="assets/img/SolomonsWebsite/Homepage/IntroductionButton_HomePage.png" alt="">
+                </a>
     
+                <a href="#" class="news_btn">
+                    <img src="assets/img/SolomonsWebsite/Homepage/Monthlynews_HomePage.png" alt="">
+                </a>
+            </div>
+            <div class="menu">
+                <a href="#" class="menu_link">
+                    <img src="assets/img/SolomonsWebsite/Homepage/ProjectButton_HomePage.png" alt="">
+                </a>
+                <a href="#" class="menu_link">
+                    <img src="assets/img/SolomonsWebsite/Homepage/CrewButton_HomePage.png" alt="">
+                </a>
+                <a href="#" class="menu_link">
+                    <img src="assets/img/SolomonsWebsite/Homepage/Contact Us Button_ HomePage.png" alt="">
+                </a>
+                <a href="#" class="menu_link">
+                    <img src="assets/img/SolomonsWebsite/Homepage/MusicButton_Homepage.png" alt="">
+                </a>
+                <a href="#" class="menu_link">
+                    <img src="assets/img/SolomonsWebsite/Homepage/MediaButton_HomePage.png" alt="">
+                </a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Background Music -->
+
+    <audio autoplay id="bg_music">
+        <source src="" type="audio/mpeg">
+    </audio>
 </body>
+
 <!-- Scripts -->
 <link rel="stylesheet" href="https://code.jquery.com/jquery-3.6.0.min.js">
 <script src="assets/js/TweenMax.min.js"></script>
 
 <!-- Custom Script -->
 <script src="assets/js/main.js"></script>
+<script>
+    var bg_music = document.getElementById("bg_music");
+    var music_btn = document.getElementById("music_btn");
+
+    music_btn.onclick = function(){
+        if(bg_music.paused){
+            bg_music.play();
+            music_btn.src = "";
+        }else{
+            bg_music.paused();
+            music_btn.src = "";
+        }
+    }
+</script>
 </html>

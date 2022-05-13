@@ -7,7 +7,7 @@ TweenMax.from('.main_home', 2,{
     ease: Power2.easeInOut
 })
 
-TweenMax.from('.main2', 2,{
+TweenMax.from('.home_section', 2,{
     delay: .1,
     width: 0,
     opacity: 0,
