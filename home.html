@@ -43,13 +43,13 @@
                 <a href="#" class="intro_btn">
                     <img src="assets/img/SolomonsWebsite/Homepage/IntroductionButton_HomePage.png" alt="">
                 </a>
-    
+                
                 <a href="#" class="news_btn">
                     <img src="assets/img/SolomonsWebsite/Homepage/Monthlynews_HomePage.png" alt="">
                 </a>
             </div>
             <div class="menu">
-                <a href="#" class="menu_link">
+                <a href="project.html" class="menu_link">
                     <img src="assets/img/SolomonsWebsite/Homepage/ProjectButton_HomePage.png" alt="">
                 </a>
                 <a href="#" class="menu_link">
@@ -72,7 +72,7 @@
     <!-- Background Music -->
 
     <audio autoplay id="bg_music">
-        <source src="" type="audio/mpeg">
+        <source src="assets/music/Solomon - One Unity [Remake] (1).mp3" type="audio/mpeg">
     </audio>
 </body>
 
@@ -83,17 +83,19 @@
 <!-- Custom Script -->
 <script src="assets/js/main.js"></script>
 <script>
-    var bg_music = document.getElementById("bg_music");
-    var music_btn = document.getElementById("music_btn");
 
-    music_btn.onclick = function(){
-        if(bg_music.paused){
-            bg_music.play();
-            music_btn.src = "";
-        }else{
-            bg_music.paused();
-            music_btn.src = "";
+    var audio = document.querySelector('#music_btn');
+    audio.addEventListener('click',function(){
+        var is_muted = document.querySelector("#bg_music").muted;
+        if(is_muted){
+            document.querySelector("#bg_music").muted = false;
+            audio.src = "assets/img/SolomonsWebsite/Homepage/Mute Button_HomePage.png";
         }
-    }
+        else{
+            document.querySelector("#bg_music").muted = true;
+            audio.src = "assets/img/SolomonsWebsite/Homepage/MusicButton_Homepage.png";
+        }
+    });
+
 </script>
 </html>
